@@ -1,0 +1,76 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "mypostgres",
+    "public": false
+  },
+  "AccessToken": {
+    "dataSource": "mypostgres",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "mypostgres",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "mypostgres",
+    "public": false
+  },
+  "Role": {
+    "dataSource": "mypostgres",
+    "public": false
+  },
+  "Quiz": {
+    "dataSource": "mypostgres",
+    "public": true
+  },
+  "Question": {
+    "dataSource": "mypostgres",
+    "public": true
+  },
+  "ApplicationUser": {
+    "dataSource": "mypostgres",
+    "public": true
+  },
+  "UsersQuizs": {
+    "dataSource": "mypostgres",
+    "public": true
+  },
+  "AnswersForAQuestion": {
+    "dataSource": "mypostgres",
+    "public": true
+  },
+  "Container": {
+    "dataSource": "file_storage",
+    "public": true
+  },
+  "ActionHistory": {
+    "dataSource": "mypostgres",
+    "public": true
+  },
+  "Category": {
+    "dataSource": "mypostgres",
+    "public": true
+  },
+  "Exam": {
+    "dataSource": "mypostgres",
+    "public": true
+  },
+  "DotThi": {
+    "dataSource": "mypostgres",
+    "public": true
+  }
+}

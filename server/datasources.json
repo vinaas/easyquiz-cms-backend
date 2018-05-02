@@ -1,0 +1,13 @@
+{
+  "mypostgres": {
+    "name": "mypostgres",
+    "connector": "memory",
+    "file": "memorydb/memorydata.json"
+  },
+  "file_storage": {
+    "name": "file_storage",
+    "connector": "loopback-component-storage",
+    "provider": "filesystem",
+    "root": "./server/storage"
+  }
+}

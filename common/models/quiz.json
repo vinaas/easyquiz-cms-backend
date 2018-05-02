@@ -1,0 +1,97 @@
+{
+  "name": "Quiz",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "forceId": false,
+  "properties": {
+    "examId": {
+      "type": "number"
+    },
+    "quizTime": {
+      "type": "date"
+    },
+    "quizName": {
+      "type": "string"
+    },
+    "sbdPrefix": {
+      "type": "string"
+    },
+    "quizInfo": {
+      "type": {
+        "quizTime": "date",
+        "quizName": "string"
+      }
+    },
+    "quizStatus": {
+      "type": "string"
+    },
+    "totalTime": {
+      "type": "number"
+    },
+    "numberOfQuestions": {
+      "type": "number"
+    },
+    "totalQuestions": {
+      "type": "number"
+    },
+    "listQuestionIds": {
+      "type": [
+        "number"
+      ]
+    },
+    "listUserIds": {
+      "type": [
+        "number"
+      ]
+    },
+    "created": {
+      "type": "date"
+    },
+    "createdUserId": {
+      "type": "number"
+    },
+    "lastModified": {
+      "type": "date"
+    },
+    "lastModifiedUserId": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "questions": {
+      "type": "hasMany",
+      "model": "Question",
+      "foreignKey": ""
+    },
+    "dotThi": {
+      "type": "hasMany",
+      "model": "DotThi",
+      "foreignKey": "monThiId"
+    },
+    "applicationUsers": {
+      "type": "hasMany",
+      "model": "ApplicationUser",
+      "foreignKey": "",
+      "through": "UsersQuizs"
+    }
+  },
+  "acls": [
+    {
+      "accessType": "WRITE",
+      "principalType": "ROLE",
+      "principalId": "admin",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$unauthenticated",
+      "permission": "DENY"
+    }
+  ],
+  "methods": {}
+}

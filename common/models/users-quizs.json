@@ -1,0 +1,64 @@
+{
+  "name": "UsersQuizs",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "forceId": false,
+  "properties": {
+    "quizId": {
+      "type": "number"
+    },
+    "registrationNumber": {
+      "type": "string"
+    },
+    "answerDetail": {
+      "type": [
+        "object"
+      ]
+    },
+    "listQuestions": {
+      "type": [
+        "object"
+      ]
+    },
+    "result": {
+      "type": "string"
+    },
+    "scopes": {
+      "type": "number"
+    },
+    "scopesPraction": {
+      "type": "string"
+    },
+    "beginTime": {
+      "type": "date"
+    },
+    "userStatus": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "quiz": {
+      "type": "belongsTo",
+      "model": "Quiz",
+      "foreignKey": "quizId"
+    },
+    "applicationUser": {
+      "type": "belongsTo",
+      "model": "ApplicationUser",
+      "foreignKey": ""
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$unauthenticated",
+      "permission": "DENY"
+    }
+  ],
+  "methods": {}
+}

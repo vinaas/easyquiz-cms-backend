@@ -1,0 +1,30 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "mongoDs": {
+    "host": "ds143221.mlab.com",
+    "port": 43221,
+    "database": "quiztestdb",
+    "username": "quiztestadmin",
+    "password": "123456",
+    "name": "mongoDs",
+    "connector": "mongodb"
+  },
+  "mypostgres": {
+    "host": "localhost",
+    "port": 5432,
+    "database": "quiz",
+    "password": "Vinaas!@#456",
+    "name": "mypostgres",
+    "user": "postgres",
+    "connector": "postgresql"
+  },
+  "file_storage": {
+    "name": "file_storage",
+    "connector": "loopback-component-storage",
+    "provider": "filesystem",
+    "root": "storage"
+  }
+}
