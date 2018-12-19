@@ -41,9 +41,32 @@
     }
   },
   "files": {
-    "loopback#static": {
-      "params": "$!../client"
-    }
+    "loopback#static": [
+      {
+        "paths": [
+          "/"
+        ],
+        "params": "$!../easyadmin"
+      },
+      {
+        "paths": [
+          "/easyweb"
+        ],
+        "params": "$!../easyweb"
+      },
+      {
+        "paths": [
+          "/easyapp"
+        ],
+        "params": "$!../easyapp"
+      },
+      {
+        "paths": [
+          "/images"
+        ],
+        "params": "server/storage/images"
+      }
+    ]
   },
   "final": {
     "loopback#urlNotFound": {}
